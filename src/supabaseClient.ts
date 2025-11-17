@@ -1,7 +1,7 @@
 import { createClient } from '@supabase/supabase-js'
 
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_SUPABASE_ANON_KEY
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey)
 
@@ -11,6 +11,8 @@ export type User = {
   full_name: string
   annual_vacation_days: number
   remaining_vacation_days: number
+  role: 'employee' | 'manager'
+  compensation_rate_per_day: number
   created_at: string
   updated_at: string
 }

@@ -39,6 +39,8 @@ export default function Auth() {
               full_name: fullName,
               annual_vacation_days: 20,
               remaining_vacation_days: 20,
+              role: 'employee',
+              compensation_rate_per_day: 100,
             },
           ])
 
